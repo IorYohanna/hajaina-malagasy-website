@@ -16,8 +16,9 @@ import {
 import Header from "@/components/header";
 import Link from "next/link"; // Import Link
 import Footer from "@/components/footer"; // Added import
-import OpenRouterChat from "@/components/image-generator";
+
 import ImageGenerator from "@/components/image-generator";
+import Assistant from "@/components/Assistant";
 
 export default function DashboardPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -63,7 +64,8 @@ export default function DashboardPage() {
             <p className="text-gray-600 max-w-3xl mx-auto font-light leading-relaxed text-lg">
               Bienvenue, {userEmail} !
             </p>
-            <ImageGenerator />
+            {/* <ImageGenerator /> */}
+            <Assistant/>
             <Button
               onClick={handleLogout}
               variant="outline"
